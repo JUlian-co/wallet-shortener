@@ -1,0 +1,29 @@
+{
+  "name": "wallet-shortener",
+  "version": "1.0.0",
+  "description": "Simply short your Wallet Addresses in your project, to give your users a better UI and UX. ",
+  "keywords": [
+    "wallet",
+    "short",
+    "user-friendly",
+    "crypto",
+    "eoa",
+    "smart-contract",
+    "ethereum"
+  ],
+  "homepage": "https://github.com/JUlian-co/wallet-shortener#readme",
+  "bugs": {
+    "url": "https://github.com/JUlian-co/wallet-shortener/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JUlian-co/wallet-shortener.git"
+  },
+  "license": "MIT",
+  "author": "Julian",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  }
+}
