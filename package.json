@@ -1,6 +1,6 @@
 {
   "name": "wallet-shortener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simply short your Wallet Addresses in your project, to give your users a better UI and UX. ",
   "keywords": [
     "wallet",
