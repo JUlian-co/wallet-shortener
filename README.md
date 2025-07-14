@@ -66,3 +66,7 @@ export default function WalletDisplay({ address }) {
 ## 📜 License
 
 MIT – free to use, even commercially, idc.
+
+
+
+--> Please give this repository a start to support me <3
