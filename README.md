@@ -69,4 +69,4 @@ MIT – free to use, even commercially, idc.
 
 
 
---> Please give this repository a start to support me <3
+🌟 --> Please give this repository a star to support me <3
