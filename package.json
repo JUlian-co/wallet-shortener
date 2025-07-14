@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "author": "Julian",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "test"
