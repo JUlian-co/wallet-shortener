@@ -1,6 +1,6 @@
 # wallet-shortener
 
-A cute utility to shorten Ethereum wallet addresses like `0xE355...99F4`.  
+A cute utility to shorten Ethereum wallet addresses like `0x81C7...cF2B`.  
 Perfect for displaying wallet addresses in a clean, readable format in dApps.
 
 ## 🚀 Installation
@@ -14,10 +14,10 @@ npm install wallet-shortener
 ```js
 import { shortAddress } from "wallet-shortener";
 
-const full = "0xE355f4f2d474Bd390b6223fC69e37F08C5Ae99F4";
+const full = "0x81C75741Db32d6329127bd499a33e562462BcF2B";
 
 const short = shortAddress(full); // Default: 4 left / 4 right
-// -> "0xE3...99F4"
+// -> "0x81...cF2B"
 ```
 
 ## ⚙️ Options
@@ -25,11 +25,11 @@ const short = shortAddress(full); // Default: 4 left / 4 right
 You can also configure how many characters to show on the left and right:
 
 ```js
-shortAddress("0xE355f4f2d474Bd390b6223fC69e37F08C5Ae99F4", {
+shortAddress("0x81C75741Db32d6329127bd499a33e562462BcF2B", {
   left: 5,
   right: 3
 });
-// -> "0xE35...9F4"
+// -> "0x81C...F2B"
 ```
 
 ## 💡 Ideal for
