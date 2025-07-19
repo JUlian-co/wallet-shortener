@@ -1,7 +1,7 @@
 # wallet-shortener
 
 A cute utility to shorten crypto wallet addresses like `0x81...cF2B`.  
-Perfect for displaying wallet addresses in a clean, readable format in dApps.
+Perfect for displaying wallet addresses in a clean, readable format in dApps, and when you click on it, you even have **click-to-copy** built in.
 
 ---
 
@@ -15,21 +15,14 @@ npm install wallet-shortener
 
 ## ⚙️ Options
 
-You can also configure how many characters to show on the left and right:
+You can also configure how many characters to show on the left and right, and disable **click-to-copy**:
 
-```js
-shortAddress("0x81C75741Db32d6329127bd499a33e562462BcF2B", {
-  left: 5,
-  right: 3
-});
+```jsx
+<ShortAddress right={5} left={3} copyOnClick={false}>{address}</ShortAddress>
 // -> "0x81C...F2B"
 ```
 
 ---
-
-## 🧩 React Component: `<ShortAddress />`
-
-This package also includes a ready-to-use React component that displays the shortened address and supports **click-to-copy** behavior by default.
 
 ### ✅ Usage
 
