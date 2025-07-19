@@ -1,7 +1,7 @@
 {
   "name": "wallet-shortener",
-  "version": "1.0.5",
-  "description": "Simply short your Wallet Addresses in your project, to give your users a better UI and UX. ",
+  "version": "1.0.7",
+  "description": "Simply short your Wallet Addresses in your project, to give your users a better UI and UX.",
   "keywords": [
     "wallet",
     "short",
@@ -22,8 +22,20 @@
   "license": "MIT",
   "author": "Julian",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./WalletAddress": {
+      "import": "./dist/WalletAddress.js"
+    }
+  },
   "scripts": {
-    "test": "test"
+    "build": "esbuild src/index.js --outfile=dist/index.js --format=esm && esbuild src/WalletAddress.jsx --outfile=dist/WalletAddress.js --format=esm --loader:.jsx=jsx",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.5"
   }
 }
