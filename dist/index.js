@@ -1,5 +1,5 @@
-import { shortAddress } from "./src/shortAddress";
-import { WalletAddress } from "./src/WalletAddress";
+import { shortAddress } from "./shortAddress";
+import { WalletAddress } from "./WalletAddress";
 export {
   WalletAddress,
   shortAddress
