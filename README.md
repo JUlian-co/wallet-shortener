@@ -1,6 +1,6 @@
 # wallet-shortener
 
-A cute utility to shorten crypto wallet addresses like `0x81C7...cF2B`.  
+A cute utility to shorten crypto wallet addresses like `0x81...cF2B`.  
 Perfect for displaying wallet addresses in a clean, readable format in dApps.
 
 ---
@@ -9,21 +9,6 @@ Perfect for displaying wallet addresses in a clean, readable format in dApps.
 
 ```bash
 npm install wallet-shortener
-```
-
----
-
-## 🔧 Usage
-
-### `shortAddress(address: string, options?: { left?: number; right?: number })`
-
-```js
-import { shortAddress } from "wallet-shortener";
-
-const full = "0x81C75741Db32d6329127bd499a33e562462BcF2B";
-
-const short = shortAddress(full); // Default: 4 left / 4 right
-// -> "0x81...cF2B"
 ```
 
 ---
@@ -94,12 +79,11 @@ export default function App() {
 ## 🧪 Example in Next.js
 
 ```tsx
-import { shortAddress, ShortAddress } from "wallet-shortener";
+import { ShortAddress } from "wallet-shortener";
 
 export default function WalletDisplay({ address }) {
   return (
     <div>
-      <p>{shortAddress(address, { left: 6, right: 5 })}</p>
       <ShortAddress>{address}</ShortAddress>
     </div>
   );
