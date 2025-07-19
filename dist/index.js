@@ -1,6 +1,4 @@
-import { shortAddress } from "./shortAddress";
-import { WalletAddress } from "./WalletAddress";
+import { ShortAddress } from "./ShortAddress";
 export {
-  WalletAddress,
-  shortAddress
+  ShortAddress
 };

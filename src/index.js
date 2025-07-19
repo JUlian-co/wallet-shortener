@@ -1,2 +1,5 @@
-export { shortAddress } from "./shortAddress";
-export { WalletAddress } from "./WalletAddress";
+import { ShortAddress } from "./ShortAddress";
+
+export {
+  ShortAddress
+};

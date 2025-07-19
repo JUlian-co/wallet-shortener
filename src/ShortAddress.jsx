@@ -1,13 +1,19 @@
 import React from "react";
-import { shortAddress } from "./shortAddress";
 
-export const WalletAddress = ({
-  address,
-  left = 6,
+export const ShortAddress = ({
+  children: address,
+  left = 4,
   right = 4,
-  copyOnClick = false,
+  copyOnClick = true,
   className = "",
 }) => {
+  if (!address || typeof address !== "string") return null;
+
+  const shortAddress =
+    address.length <= left + right
+      ? address
+      : `${address.slice(0, left)}...${address.slice(-right)}`;
+
   const handleClick = () => {
     if (copyOnClick && navigator?.clipboard) {
       navigator.clipboard.writeText(address);
@@ -19,8 +25,9 @@ export const WalletAddress = ({
       onClick={handleClick}
       style={{ cursor: copyOnClick ? "pointer" : "default" }}
       className={className}
+      title={address}
     >
-      {shortAddress(address, { left, right })}
+      {shortAddress}
     </span>
   );
 };

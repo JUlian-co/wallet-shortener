@@ -42,23 +42,20 @@ shortAddress("0x81C75741Db32d6329127bd499a33e562462BcF2B", {
 
 ---
 
-## 🧩 React Component: `<WalletAddress />`
+## 🧩 React Component: `<ShortAddress />`
 
-This package also includes a ready-to-use React component that displays the shortened address and optionally supports **click-to-copy** behavior.
+This package also includes a ready-to-use React component that displays the shortened address and supports **click-to-copy** behavior by default.
 
 ### ✅ Usage
 
 ```tsx
-import { WalletAddress } from "wallet-shortener";
+import { ShortAddress } from "wallet-shortener";
 
 export default function App() {
   return (
-    <WalletAddress
-      address="0x81C75741Db32d6329127bd499a33e562462BcF2B"
-      left={6}
-      right={4}
-      copyOnClick
-    />
+    <ShortAddress>
+      0x81C75741Db32d6329127bd499a33e562462BcF2B
+    </ShortAddress>
   );
 }
 ```
@@ -67,10 +64,10 @@ export default function App() {
 
 | Prop         | Type     | Default | Description                                  |
 |--------------|----------|---------|----------------------------------------------|
-| `address`    | `string` | —       | The full Ethereum wallet address             |
+| `children`   | `string` | —       | The full Ethereum wallet address             |
 | `left`       | `number` | `4`     | Characters to show on the left               |
 | `right`      | `number` | `4`     | Characters to show on the right              |
-| `copyOnClick`| `boolean`| `false` | Copies the full address to clipboard on click|
+| `copyOnClick`| `boolean`| `true`  | Copies the full address to clipboard on click|
 | `className`  | `string` | `""`    | Optional CSS class for styling               |
 
 ---
@@ -97,13 +94,13 @@ export default function App() {
 ## 🧪 Example in Next.js
 
 ```tsx
-import { shortAddress, WalletAddress } from "wallet-shortener";
+import { shortAddress, ShortAddress } from "wallet-shortener";
 
 export default function WalletDisplay({ address }) {
   return (
     <div>
       <p>{shortAddress(address, { left: 6, right: 5 })}</p>
-      <WalletAddress address={address} copyOnClick />
+      <ShortAddress>{address}</ShortAddress>
     </div>
   );
 }
